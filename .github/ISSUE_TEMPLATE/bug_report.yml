@@ -7,11 +7,16 @@ body:
     attributes:
       value: |
         **Before reporting a bug, please see if you are using the [latest version](https://cactusmod.xyz) of Cactus.**
+  - type: checkboxes
+    attributes:
+      options:
+        - label: I am using the latest available version of Cactus (devbuilds not included)
+          required: true
   - type: dropdown
     attributes:
       label: "Language"
       description: |
-        Select the language you are playing on
+        Select the language this bug occurs with
       options:
         - English (default)
         - German
@@ -20,39 +25,25 @@ body:
 
   - type: textarea
     attributes:
-      label: Console Error
-      description: |
-        If you encounter warnings/errors in your console, **paste them with https://paste.gg/ and put the paste link here**.
-        If the error is small/less than 10 lines, you may put it directly into this field.
-      value: |
-        ```
-        Put the paste.gg link or text here.
-        ```
-      placeholder: Please do not remove the grave accents; simply replace the line of text in the middle.
-    validations:
-      required: false
-
-  - type: textarea
-    attributes:
       label: Bug Description
       description: |
-        Describe the unexpected behavior.
+        Describe the unexpected behavior of translations.
         If you want to attach screenshots, use the comment field at the bottom of the page.
       placeholder: |
-        Example: "Placing signs on 1.13.2 causes text to disappear."
+        Example: "The title of the 'Macros' screen says 'Modules'"
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: Steps to Reproduce
+      label: Location
       description: |
-        List the steps on how we can reproduce the issue. Make sure we can easily understand what you mean with each step.
+        Describe where this translation issue is located in the mod
       placeholder: |
         Example:
-        1. Login with a 1.13.2 client
-        2. Place a sign
-        3. The sign text is displayed wrong
+        1. Go into the Cactus main menu
+        2. Navigate to "Macros"
+        3. The screen title is wrong
     validations:
       required: true
 
@@ -60,19 +51,19 @@ body:
     attributes:
       label: Expected Behavior
       description: |
-        Describe what exactly you expected to happen.
+        Describe what you think should've happened
       placeholder: |
-        Example: "Placed sign text should not disappear."
+        Example: "The title should say 'Macros'"
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: Additional Server Info
+      label: Additional Client Info
       description: |
-        Do you use a proxy (e.g. BungeeCord)? What software do you use and what plugins?
+        Do you use other mods which could interfer? Are you using a special modloader?
       placeholder: |
-        Example: "I also use BungeeCord with the following plugins: x, y, z"
+        Example: "I use quilt as the mod loader and i also have mods x and y installed"
     validations:
       required: false
 
@@ -81,11 +72,9 @@ body:
       label: Checklist
       description: Make sure you have followed each of the steps outlined here.
       options:
-        - label: Via plugins are only running on **EITHER** the backend servers (e.g. Paper) **OR** the proxy (e.g. BungeeCord), **not on both**.
+        - label: I have described the problem so that it is easy to understand
           required: true
-        - label: I have included a ViaVersion dump.
+        - label: If applicable, I have included a screenshot.
           required: true
-        - label: If applicable, I have included a paste (**not a screenshot**) of the error.
-          required: true
-        - label: I have tried the latest build(s) from https://ci.viaversion.com/ and the issue still persists.
+        - label: This bug does not occur as part of an experimental feature
           required: true
