@@ -9,6 +9,7 @@ body:
         **Before reporting a bug, please see if you are using the [latest version](https://cactusmod.xyz) of Cactus.**
   - type: checkboxes
     attributes:
+      label: Version check
       options:
         - label: I am using the latest available version of Cactus (devbuilds not included)
           required: true
