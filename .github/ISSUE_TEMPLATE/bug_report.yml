@@ -1,5 +1,5 @@
 name: Bug Report
-description: Report a bug or console error
+description: Report a missing or invalid translation
 labels: [wrong]
 
 body:
@@ -79,3 +79,8 @@ body:
           required: true
         - label: This bug does not occur as part of an experimental feature
           required: true
+  - type: markdown
+    attributes:
+      value: |
+        Please assign labels based on if the translation is missing, wrong or if there is another problem with it.
+        This makes it easier for us to filter and fix these problems.
