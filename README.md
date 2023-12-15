@@ -1,3 +1,10 @@
+<p align="center">
+<img src="https://cactusmod.xyz/media/cactus.png" alt="cactus-client-logo" width="15%"/>
+</p>
+
+<h1 align="center">Cactus</h1>
+<p align="center">Fabric mod aiming at improving various aspects of Minecraft with a focus on Redstone and general Gameplay.</p>
+
 # Translations
 Repository for contributing to translation of cactusmod
 
