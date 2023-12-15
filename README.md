@@ -45,18 +45,18 @@ Contributing to the translation is a straightforward process. Follow these steps
    git clone https://github.com/your-username/cactus-mod.git
    ```
 4. **Create a New Branch:** Create a new branch for your changes:
-  ```bash
-  git checkout -b feature/translation-changes
-  ```
+   ```bash
+   git checkout -b feature/translation-changes
+   ```
 5. **Make Changes:** Add or modify the translation files.
 6. **Commit Changes:** Commit your changes with a descriptive commit message:
-  ```bash
-  git commit -m "Add/modify translation for language X"
-  ```
+   ```bash
+   git commit -m "Add/modify translation for language X"
+   ```
 7. **Push Changes:** Push your changes to your forked repository:
-  ```bash
-  git push origin feature/translation-changes
-  ```
+   ```bash
+   git push origin feature/translation-changes
+   ```
 8. **Create Pull Request:** Go to the original repository on GitHub. GitHub will prompt you to create a pull request. Provide details about your changes and submit the pull request.
 
 Thank you for contributing to the Cactus Mod translation!
