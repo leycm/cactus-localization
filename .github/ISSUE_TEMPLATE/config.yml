@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Latest Version
+    url: https://cactusmod.xyz/download
+    about: Before creating an issue, make sure you have the latest version
+  - name: Cactus Discord
+    url: https://discord.gg/fA48RXQ6B3
+    about: For feature requests, join our Discord and use the issues channel
