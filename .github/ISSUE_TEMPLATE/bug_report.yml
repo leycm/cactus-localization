@@ -6,16 +6,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Before reporting a bug, please see if using master/dev builds from https://ci.viaversion.com/ fixes your issue.**
-        Whenever you see fit, you can upload images or videos to any of the text fields.
-
-  - type: input
+        **Before reporting a bug, please see if you are using the [latest version](https://cactusmod.xyz) of Cactus.**
+  - type: dropdown
     attributes:
-      label: "`/viaversion dump` Output"
+      label: "Language"
       description: |
-        Run `/viaversion dump` in the console or in the chat, then copy and paste the given link here.
-      placeholder: |
-        https://dump.viaversion.com/...
+        Select the language you are playing on
+      options:
+        - English (default)
+        - German
     validations:
       required: true
 
