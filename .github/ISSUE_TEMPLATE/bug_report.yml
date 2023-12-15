@@ -82,5 +82,6 @@ body:
   - type: markdown
     attributes:
       value: |
+        <hr>
         Please assign labels based on if the translation is missing, wrong or if there is another problem with it.
         This makes it easier for us to filter and fix these problems.
