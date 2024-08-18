@@ -110,7 +110,7 @@
   "modules.fluid_marker.description": "Marks blocks next to water or lava and / or prevents you from breaking such",
   "modules.fluid_marker.settings.radius.name": "Check Radius",
   "modules.fluid_marker.settings.mode.name": "Mode",
-  "modules.fluid_marker.settings.mode.description": "§nHighlight\nHighlights blocks next to fluids\n\n§nPrevent\nPrevents you from breaking specified blocks",
+  "modules.fluid_marker.settings.mode.description": "§r§l§nHighlight\n§r§aHighlights blocks next to fluids\n\n§r§l§nPrevent\n§r§aPrevents you from breaking specified blocks",
   "modules.fluid_marker.settings.mode.highlight": "§aHighlight",
   "modules.fluid_marker.settings.mode.prevent": "§cPrevent",
 
@@ -138,7 +138,14 @@
   "modules.hud.settings.tps.name": "Show estimate TPS",
   "modules.hud.settings.darkBackground.name": "Dark Background",
   "modules.hud.settings.scale.name": "Scale",
+  "modules.hud.settings.hudStyle.name": "HUD Style",
+  "modules.hud.settings.hudStyle.default": "Default",
+  "modules.hud.settings.hudStyle.edgeless": "Edgeless",
+  "modules.hud.settings.hudStyle.tooltip": "Tooltip",
+  "modules.hud.settings.connectElements.name": "Connect Elements",
+  "modules.hud.settings.hideSidebarF3.name": "Hide Sidebar in Debug Screen",
   "modules.hud.groups.render": "Render",
+  "modules.hud.groups.view": "View",
 
   "modules.name_tags.name": "Name Tags",
   "modules.name_tags.description": "Allows customization of name-tag related stuff",
@@ -210,6 +217,8 @@
   "modules.better_tooltips.description": "Enhances the tooltips of some items",
   "modules.better_tooltips.settings.shulkerTooltip.name": "Shulker box Tooltips",
   "modules.better_tooltips.settings.shulkerColor.name": "Use Shulker Colors",
+  "modules.better_tooltips.settings.mapTooltip.name": "Show Map Preview",
+  "modules.better_tooltips.settings.bannerTooltip.name": "Show Banner Tooltip",
   "modules.better_tooltips.settings.overwriteShulkerDefault.name": "Disable Shulker item-list",
   "modules.better_tooltips.settings.overwriteShulkerDefault.description": "Disables the default Item-list for Shulker boxes from minecraft",
   "modules.better_tooltips.settings.armorstandTooltip.name": "Armor-Stand Tooltips",
@@ -241,8 +250,21 @@
   "modules.antiAds.settings.bossbar.name": "Block from Boss-Bar",
   "modules.antiAds.settings.titles.name": "Block from Titles",
   "modules.antiAds.settings.chat.name": "Block from Chat",
-  "modules.antiAds.settings.keywords.name": "Custom Keywords",
-  "modules.antiAds.settings.keywords.description": "Seperate your keywords with a §e;",
+  "modules.antiAds.settings.keywords.name": "Keywords",
+  "modules.antiAds.settings.keywords.description": "A text is considered an ad if it contains any of the specified keywords",
+
+  "modules.quitConfirm.name": "Quit Confirm",
+  "modules.quitConfirm.description": "Prevents you from accidentally disconnecting",
+  "modules.quitConfirm.settings.mode.name": "Mode",
+  "modules.quitConfirm.settings.mode.confirm": "Prompt",
+  "modules.quitConfirm.settings.mode.clickAgain": "Double Click",
+  "modules.quitConfirm.settings.mode.cooldown": "Cooldown",
+  "modules.quitConfirm.cooldownText": "Leave: %ss",
+  "modules.quitConfirm.promptClickAgain": "Are you sure you want to leave?",
+  "modules.quitConfirm.promptConfirm": "You are about to quit the server / world. Do you want to leave?",
+
+  "modules.crashPreventor.name": "Crash Preventor",
+  "modules.crashPreventor.description": "Tries to prevent your game from crashing when being in-game",
 
   "module_categories.all": "All",
   "module_categories.utility": "Utility",
@@ -506,6 +528,9 @@
 
   "gui.screen.screenshots.title": "Screenshots",
 
+  "gui.screen.backgroundSelector.title": "Select Background",
+  "gui.screen.backgroundSelector.reload": "Reload",
+
   "settingGroups.main": "General",
   "settingGroups.irc": "IRC",
   "settingGroups.widgets": "Widgets",
@@ -545,6 +570,7 @@
   "settings.chatHistoryLength.name": "Chat History length",
   "settings.widgets.name": "Widget Settings",
   "settings.scriptModifyWidgets.name": "Allow Userscript modification",
+  "settings.describeModulesWhenHovered.name": "Show module description when hovered",
   "settings.removeRealms.name": "Remove Realms",
   "settings.removeLangAndAccessibility.name": "Clean Title screen",
   "settings.removeLangAndAccessibility.description": "Removed Language and Accessibility buttons from the Title Screen",
@@ -555,11 +581,6 @@
   "settings.replaceMouseOptions.description": "Changes the mouse options button to the Sensitivity slider",
   "settings.cactusByOptions.name": "Place Cactus next to options",
   "settings.cactusByOptions.description": "Makes the options button in the title screen a bit smaller to place the cactus button next to it",
-  "settings.hudStyle.name": "HUD Style",
-  "settings.hudStyle.default": "Default",
-  "settings.hudStyle.edgeless": "Edgeless",
-  "settings.hudStyle.tooltip": "Tooltip",
-  "settings.connectElements.name": "Connect Elements",
 
   "worldHosting.notWhitelisted": "This world is private.\nAsk the host to add you to the white-list.",
 
