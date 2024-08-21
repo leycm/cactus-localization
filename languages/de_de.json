@@ -4,7 +4,7 @@
     "systems.keybindValue": "Tastenbelegung: %s",
   
     "irc.not_connected": "Du bist nicht mit dem IRC verbunden.",
-    "irc.ratelimit": "Diese Resource wurde von einem Anti-Spam-Filter blockiert.",
+    "irc.ratelimit": "Du sendest zu viele Anfragen.",
     "irc.chatNotEnabled": "IRC-Chat ist nicht in den Einstellungen aktiviert.",
   
     "command.arg.cape": "Cape-ID %s ist nicht gültig.",
