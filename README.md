@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://cactusmod.xyz/media/cactus.png" alt="cactus-client-logo" width="15%"/>
+<img src="https://cactusmod.xyz/static/icon.webp" alt="cactus-client-logo" width="15%"/>
 </p>
 
 <h1 align="center">Cactus</h1>
