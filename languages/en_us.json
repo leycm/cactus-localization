@@ -7,11 +7,13 @@
   "irc.ratelimit": "This resource is being rate-limited",
   "irc.chatNotEnabled": "Global chat is disabled in options",
 
+  "command.creativeModeRequired": "Creative Mode is required for this action.",
   "command.arg.cape": "Cape ID %s is invalid.",
   "command.arg.file": "File with name %s doesn't exist.",
   "command.arg.player": "Player with name %s doesn't exist.",
-  "command.arg.playerList": "Playerlist entry with name %s doesn't exist.",
+  "command.arg.playerList": "Player with name %s isn't online.",
   "command.arg.waypoint": "Waypoint with name %s doesn't exist.",
+  "command.arg.macro": "Macro with name %s doesn't exist.",
   "command.arg.color": "Use #<hexCode>",
   "command.arg.url": "The URL is malformed.",
   "command.arg.linkCode": "Invalid linking code (0000-0000-0000-0000)",
@@ -25,8 +27,8 @@
   "commands.binds.clear.success": "Cleared all keybindings",
 
   "commands.chat.description": "Switch between Global and IRC chat",
-  "commands.chat.changed.irc": "Chat changed to §aIRC%7.",
-  "commands.chat.changed.global": "Chat changed to §aGlobal%7.",
+  "commands.chat.changed.irc": "Chat changed to §aIRC§7.",
+  "commands.chat.changed.global": "Chat changed to §aGlobal§7.",
 
   "commands.content.description": "Manage your content packs",
   "commands.content.notExist": "Pack with ID %s does not exist",
@@ -86,6 +88,30 @@
 
   "commands.nbt.no_item": "Hold an item in your hand!",
 
+  "commands.lan-op.notInWorld": "You are not in a singleplayer world",
+  "commands.lan-op.noDeopCommandsEnabled": "You can't remove operator permissions from players if commands are enabled in your world",
+  "commands.lan-op.enableCheats.success": "Cheats are now enabled",
+  "commands.lan-op.enableCheats.fail": "Cheats are already enabled",
+  "commands.lan-op.disableCheats.success": "Cheats are now disabled",
+  "commands.lan-op.disableCheats.fail": "Cheats are already disabled",
+
+  "commands.tool.noItem": "You must hold an item in your main hand",
+  "commands.tool.tooltip.type": "§8Tool §6» §r%s",
+  "commands.tool.type.simple_command.name": "Command",
+  "commands.tool.type.simple_command.description": "Right-click anywhere to run the specified command there.",
+  "commands.tool.type.simple_command.lookupSuccess": "This tool runs the command '§f%s§r'.",
+  "commands.tool.type.simple_command.lookupFail": "This item is not a command tool.",
+  "commands.tool.type.macro.name": "Macro",
+  "commands.tool.type.macro.description": "Right-click anywhere to run the defined macro.",
+  "commands.tool.type.macro.macroType": "§8Target Macro §6» §r%s §6» §r%s Actions",
+  "commands.tool.type.display_converter.name": "Block to Display",
+  "commands.tool.type.display_converter.description": "Right-click a block to convert it into a block display.",
+  "commands.tool.type.display_converter.autoOrigin": "§8Origin §6» §r%s",
+  "commands.tool.type.display_converter.tag": "§8Tag §6» §r%s",
+  "commands.tool.type.display_converter.success": "Converted §a%s §8(§a%s§8) §7into a display entity",
+  "commands.tool.type.tag_tool.name": "Tag Tool",
+  "commands.tool.type.tag_tool.description": "Right-click an entity to edit its tags",
+
   "modules.auto_repeater.name": "Auto Repeater",
   "modules.auto_repeater.description": "Automatically changes the repeater delay on placed repeaters",
   "modules.auto_repeater.settings.ticks.name": "Ticks",
@@ -118,9 +144,6 @@
   "modules.tnt_timer.description": "Displays detonation time on TNT entities",
   "modules.tnt_timer.settings.color.name": "Color",
   "modules.tnt_timer.settings.color.description": "Color the tag based on detonation time",
-
-  "modules.capes.name": "Capes",
-  "modules.capes.description": "Shows capes of other players",
 
   "modules.fullbright.name": "Fullbright",
   "modules.fullbright.description": "Lights up the world",
@@ -163,7 +186,8 @@
   "modules.auto_craft.description": "Automatically crafts required items for an item",
 
   "modules.camera_mode.name": "Camera Mode",
-  "modules.camera_mode.description": "Allows you to view youe game as a camera",
+  "modules.camera_mode.description": "Pauses your game without an overlay",
+  "modules.camera_mode.notInGame": "This feature can only be used in-game",
 
   "modules.discord_rpc.name": "Discord RPC",
   "modules.discord_rpc.description": "Shows what you are doing in your Discord status",
@@ -227,6 +251,9 @@
   "modules.better_tooltips.settings.fixRomanNumerals.descriptions": "Allows higher roman numerals for enchantment level than 10",
   "modules.better_tooltips.settings.levelAsNumber.name": "Show Level as Number",
   "modules.better_tooltips.settings.showMaxOnKey.name": "Hold §eAlt §rfor max Level",
+  "modules.better_tooltips.groups.armorTrims": "Armor Trims",
+  "modules.better_tooltips.settings.showTrims.name": "Show Armor Trims",
+  "modules.better_tooltips.settings.rotateTrimPreview.name": "Rotate Preview",
 
   "modules.anti_force_pack.name": "Anti Force-Pack",
   "modules.anti_force_pack.description": "Bypasses forced resource-packs and gives you the ability to download them separately",
@@ -243,7 +270,11 @@
 
   "modules.block_outlines.name": "Block Outlines",
   "modules.block_outlines.settings.color.name": "Outline color",
-  "modules.block_outlines.settings.rgb.name": "Sync to RGB",
+  "modules.block_outlines.settings.lineWidth.name": "Outline width",
+  "modules.block_outlines.settings.renderMode.name": "Render Mode",
+  "modules.block_outlines.settings.renderMode.default": "Vanilla",
+  "modules.block_outlines.settings.renderMode.solid": "Solid",
+  "modules.block_outlines.settings.renderMode.glint": "Glint",
 
   "modules.antiAds.name": "Ad Blocker",
   "modules.antiAds.description": "Blocks advertisements for eg. the server's shop from your view",
@@ -265,6 +296,28 @@
 
   "modules.crashPreventor.name": "Crash Preventor",
   "modules.crashPreventor.description": "Tries to prevent your game from crashing when being in-game",
+
+  "modules.playerHider.name": "Player Hider",
+  "modules.playerHider.description": "Hides players which get too close to you",
+  "modules.playerHider.settings.distance.name": "Max distance",
+
+  "modules.freeLook.name": "Free Look",
+
+  "modules.crosshair.name": "Crosshair",
+  "modules.crosshair.description": "Allows you to draw your own crosshair",
+  "modules.crosshair.settings.graphic.name": "Crosshair Graphic",
+  "modules.crosshair.settings.useLiteralColors.name": "Use literal Colors",
+  "modules.crosshair.settings.useLiteralColors.description": "The crosshair, by default, applies a transformation to the color to make it better visible. If you use colors for your crosshair, you should probably enable this.",
+
+  "modules.chatTweaks.name": "Chat Tweaks",
+  "modules.chatTweaks.description": "Some small QoL tweaks for your chat",
+  "modules.chatTweaks.settings.chatEmojis.name": "Enable Emojis",
+  "modules.chatTweaks.settings.chatEmojis.description": "Type ':' in chat to get a list of emojis",
+  "modules.chatTweaks.settings.chatTagging.name": "Tagging",
+  "modules.chatTweaks.settings.chatTagging.description": "Type '@' in the chat to get a list of players",
+  "modules.chatTweaks.settings.antiSpam.name": "Anti Spam",
+  "modules.chatTweaks.settings.antiSpam.description": "Condenses messages with the same content into one and adds a counter",
+  "modules.chatTweaks.settings.saveChat.name": "Save Chat when closed",
 
   "module_categories.all": "All",
   "module_categories.utility": "Utility",
@@ -329,6 +382,7 @@
   "gui.screen.account_switcher.tokenLogin": "Use Token",
   "gui.screen.account_switcher.tokenLogin.title": "Login with token",
   "gui.screen.account_switcher.tokenLogin.text": "Access Token",
+  "gui.screen.account_switcher.changeSkin": "Change Skin",
   "gui.screen.account_switcher.offlineSession": "Offline Login",
   "gui.screen.account_switcher.offlineSession.text": "Username",
   "gui.screen.account_switcher.login": "Login",
@@ -530,6 +584,20 @@
 
   "gui.screen.backgroundSelector.title": "Select Background",
   "gui.screen.backgroundSelector.reload": "Reload",
+  "gui.screen.backgroundSelector.loading": "Loading %s backgrounds..",
+
+  "gui.screen.skinChanger.title": "Skin Changer",
+  "gui.screen.skinChanger.changeSuccess.title": "Skin changed",
+  "gui.screen.skinChanger.changeSuccess.message": "Your skin was updated successfully",
+  "gui.screen.skinChanger.changeFailed": "Skin change failed. Check your logs",
+  "gui.screen.skinChanger.deleteSkin.title": "Delete Skin",
+  "gui.screen.skinChanger.deleteSkin.message": "Are you sure you want to delete '%s'?",
+  "gui.screen.skinChanger.renameTitle": "Rename Skin",
+  "gui.screen.skinChanger.renamePlaceholder": "skin.png",
+  "gui.screen.skinChanger.download": "Download Skin",
+  "gui.screen.skinChanger.switchAccount": "Switch Account",
+
+  "gui.screen.snippets.title": "Snippets",
 
   "settingGroups.main": "General",
   "settingGroups.irc": "IRC",
@@ -540,6 +608,7 @@
   "settings.prefix.name": "Prefix",
   "settings.commandPrefix.name": "Command Prefix",
   "settings.accentColor.name": "Accent Color",
+  "settings.rgbFadingSpeed.name": "RGB Fading Speed",
   "settings.updateNotify.name": "Update Notifications",
   "settings.experiments.name": "Enable Experiments",
   "settings.experiments.description": "§cExperiments are new ideas or features which are not yet ready to be released.\n\nEnabling experiments might cause bugs and / or crashes.\n§4§lUse this at your own risk!",
@@ -548,6 +617,8 @@
   "settings.enableIrcChat.name": "Enable global Chat",
   "settings.enableIrcChat.description": "Global chat allows for a chat communication with all other online cactus users",
   "settings.ircShortPrefix.name": "IRC Short Prefix",
+  "settings.showCactusCapes.name": "Show Cactus Capes",
+  "settings.showCactusCapes.description": "Shows special capes from Cactus on players who have equipped one",
   "settings.compactUi.name": "Compact UI",
   "settings.moduleStyle.name": "Module widget style",
   "settings.moduleStyle.fill": "Fill",
@@ -561,6 +632,7 @@
   "settings.toggleFeedback.toast": "Toast",
   "settings.toggleFeedback.off": "§cOff",
   "settings.noChatWarning.name": "No Secure-Chat warning",
+  "settings.disableTelemetry.name": "Disable Telemetry",
   "settings.levelDirectory.name": "Level Directory",
   "settings.chatEmotes.name": "Enable Chat Emotes",
   "settings.customBackground.name": "Custom Background",
@@ -570,7 +642,7 @@
   "settings.chatHistoryLength.name": "Chat History length",
   "settings.widgets.name": "Widget Settings",
   "settings.scriptModifyWidgets.name": "Allow Userscript modification",
-  "settings.describeModulesWhenHovered.name": "Show module description when hovered",
+  "settings.describeModulesWhenHovered.name": "Show module Tooltip",
   "settings.removeRealms.name": "Remove Realms",
   "settings.removeLangAndAccessibility.name": "Clean Title screen",
   "settings.removeLangAndAccessibility.description": "Removed Language and Accessibility buttons from the Title Screen",
