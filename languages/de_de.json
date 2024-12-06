@@ -1,21 +1,19 @@
 {
   "generic.no_description": "Keine Beschreibung",
-
   "systems.keybindValue": "Tastenbelegung: %s",
-
   "irc.not_connected": "Du bist nicht mit dem IRC verbunden.",
   "irc.ratelimit": "Du sendest zu viele Anfragen.",
   "irc.chatNotEnabled": "IRC-Chat ist nicht in den Einstellungen aktiviert.",
-
+  "command.creativeModeRequired": "Du musst im Kreativmodus sein, um diese Aktion auszuführen.",
   "command.arg.cape": "Cape-ID %s ist nicht gültig.",
   "command.arg.file": "Datei mit Name %s existiert nicht.",
   "command.arg.player": "Spieler mit Name %s existiert nicht.",
   "command.arg.playerList": "Spielerlisteneintrag mit Name %s existiert nicht.",
   "command.arg.waypoint": "Waypoint mit Name %s existiert nicht.",
-  "command.arg.color": "Benutze #<hexCode>",
+  "command.arg.macro": "Makro mit Name %s existiert nicht.",
+  "command.arg.color": "Benutze #\u003chexCode\u003e",
   "command.arg.url": "Dieses URL ist fehlerhaft.",
   "command.arg.linkCode": "Ungültiger Verlinkungscode (0000-0000-0000-0000)",
-
   "commands.binds.description": "Zeigt alle Tastenbelegungen an",
   "commands.binds.header": "§aTastenbelegungen:",
   "commands.binds.noBinds": "Du hast keine Tastenbelegungen gesetzt.",
@@ -23,35 +21,28 @@
   "commands.binds.clear.confirm": "§c[ Alle Tastenbelegungen zurücksetzen ]",
   "commands.binds.clear.hover": "§cPermanent alle Tastenbelegungen zurücksetzen",
   "commands.binds.clear.success": "Alle Tastenbelegungen wurden zurückgesetzt.",
-
   "commands.chat.description": "Wechsle zwischen den globalen und IRC-Chats",
   "commands.chat.changed.irc": "Chat geändert zu §aIRC%7.",
   "commands.chat.changed.global": "Chat geändert zu §aGlobal%7.",
-
   "commands.content.description": "Verwalte deine Content-Packs",
   "commands.content.notExist": "Pack mit ID %s existiert nicht.",
   "commands.content.alreadyEnabled": "Dieses Pack ist bereits aktiviert!",
   "commands.content.alreadyDisabled": "Dieses Pack ist bereits deaktiviert!",
   "commands.content.cantDisable": "Dieses Pack kann nicht deaktiviert werden!",
-
   "commands.debug.description": "Debugge einige Dinge in Cactus",
   "commands.debug.start": "Debugge §b%s",
-
   "commands.filteritem.description": "Erstelle ein Filter-Item",
   "commands.filteritem.noItem": "Halte ein Item in der Haupthand!",
-
   "commands.help.description": "Zeigt alle verfügbaren Cactus-Befehle an",
   "commands.help.noCategory": "Keine Kategorie gefunden",
   "commands.help.configure": "§7§o(Konfigurieren)",
   "commands.help.header": "§fBefehle §7(%s)",
-
   "commands.color.description": "Ändere die Farbeinstellungen von Cactus",
   "commands.color.toggle.activated": "RGB §aaktiviert",
   "commands.color.toggle.deactivated": "RGB §cdesaktiviert",
   "commands.color.speed": "Farbübergangsgeschwindigkeit ist nun %s",
   "commands.color.change.1": "Farbe wurde geändert zu %s ",
   "commands.color.change.2": ".",
-
   "commands.ssb.description": "Erstelle einen Block, der eine bestimmte Signalstärke ausgibt",
   "commands.ssb.noBlock": "Gegebenes Item ist kein Block!",
   "commands.ssb.invalidComposter": "Komposter-Signal muss zwischen 0 und 6 liegen oder 8 sein!",
@@ -59,7 +50,6 @@
   "commands.ssb.noInventory": "BlockItem muss ein Inventar haben!",
   "commands.ssb.noProvider": "BlockEntityProvider muss eine Instanz vom InventoryProvider sein!",
   "commands.ssb.notAchievable": "Diese Signalstärke kann mit dem gewählten Container nicht erreicht werden",
-
   "commands.waypoint.description": "Verwalte deine Waypoints",
   "commands.waypoint.none": "Du hast keine Waypoints.",
   "commands.waypoint.list": "Deine Waypoints:",
@@ -75,17 +65,34 @@
   "commands.waypoint.toggle.hidden": "Waypoint §a%s §7ist nun versteckt.",
   "commands.waypoint.toggle.visible": "Waypoint §a%s §7ist nun sichtbar.",
   "commands.waypoint.color": "Farbe von §a%s §7wurde geändert.",
-
   "commands.worldmanager.description": "Verändere Dinge in deinen Welten mit einem Befehl",
-
-  "commands.uuid.success" : "UUID von %s ist %s §7§o(Klicke zum Kopieren)",
-  "commands.uuid.fail" : "Spieler mit Namen %s wurde nicht gefunden.",
-
+  "commands.uuid.success": "UUID von %s ist %s §7§o(Klicke zum Kopieren)",
+  "commands.uuid.fail": "Spieler mit Namen %s wurde nicht gefunden.",
   "commands.copyip.copied": "§aIP kopiert!",
   "commands.copyip.noServer": "Du bist auf keinen Server!",
-
   "commands.nbt.no_item": "Halte ein Item in der Hand!",
-
+  "commands.lan-op.notInWorld": "Du bist nicht in einer Einzelspielerwelt!",
+  "commands.lan-op.noDeopCommandsEnabled": "Du kannst OP-Rechte nicht von Spielern entfernen, wenn Befehle aktiv sind.",
+  "commands.lan-op.enableCheats.success": "Cheats wurden aktiviert.",
+  "commands.lan-op.enableCheats.fail": "Cheats sind bereits aktiviert.",
+  "commands.lan-op.disableCheats.success": "Cheats wurden deaktiviert.",
+  "commands.lan-op.disableCheats.fail": "Cheats sind bereits deaktiviert.",
+  "commands.tool.noItem": "Halte ein Item in der Hand!",
+  "commands.tool.tooltip.type": "§8Werkzeug §6» §r%s",
+  "commands.tool.type.simple_command.name": "Befehl",
+  "commands.tool.type.simple_command.description": "Rechts-Klicke irgendwo, um einen Befehl auszuführen",
+  "commands.tool.type.simple_command.lookupSuccess": "Dieses Werkzeugt führt folgenden Befehl aus: '§f%s§r'",
+  "commands.tool.type.simple_command.lookupFail": "Dieses Werkzeug führt keinen Befehl aus.",
+  "commands.tool.type.macro.name": "Makro",
+  "commands.tool.type.macro.description": "Rechts-Klicke irgendwo, um ein Makro auszuführen",
+  "commands.tool.type.macro.macroType": "§8Zielmakro §6» §r%s §6» §r%s Aktionen",
+  "commands.tool.type.display_converter.name": "Block zu Blockdisplay",
+  "commands.tool.type.display_converter.description": "Rechts-Klicke auf einen Block, um ihn in ein Blockdisplay umzuwandeln",
+  "commands.tool.type.display_converter.autoOrigin": "§8Ankerpunkt §6» §r%s",
+  "commands.tool.type.display_converter.tag": "§8Tag §6» §r%s",
+  "commands.tool.type.display_converter.success": "§a%s §8(§a%s§8) §7wurde in ein Blockdisplay umgewandelt.",
+  "commands.tool.type.tag_tool.name": "Entitäten-Tag Werkzeug",
+  "commands.tool.type.tag_tool.description": "Rechts-Klicke auf eine Entität, um ihre Tags zu bearbeiten",
   "modules.auto_repeater.name": "Auto Repeater",
   "modules.auto_repeater.description": "Stellt automatisch die Verzögerung eines platzierten Repeaters ein",
   "modules.auto_repeater.settings.ticks.name": "Ticks",
@@ -93,7 +100,6 @@
   "modules.auto_repeater.settings.ticks.t1": "1 Tick",
   "modules.auto_repeater.settings.ticks.t2": "2 Ticks",
   "modules.auto_repeater.settings.ticks.t3": "3 Ticks",
-
   "modules.bud_detector.name": "BUD-Switch finder",
   "modules.bud_detector.description": "Findet BUD-Switches in deiner Welt",
   "modules.bud_detector.settings.radius.name": "Überprüfungsradius",
@@ -105,7 +111,6 @@
   "modules.bud_detector.settings.mode.both": "Beides",
   "modules.bud_detector.settings.pistonArms.name": "Kolbenarme hervorheben",
   "modules.bud_detector.settings.pistonArms.description": "Nach oben gerichtete Kolbenarme hervorheben",
-
   "modules.fluid_marker.name": "Fluid Marker",
   "modules.fluid_marker.description": "Markiert Blöcke neben Wasser oder Lava und / oder verhindert, dass sie deine Technik zerstören",
   "modules.fluid_marker.settings.radius.name": "Überprüfungsradius",
@@ -113,18 +118,12 @@
   "modules.fluid_marker.settings.mode.description": "§r§l§nHervorheben\n§r§aHebt Blöcke neben Flüssigkeiten hervor\n\n§r§l§nVerhindern\n§r§aVerhindert, dass du bestimmte Blöcke zerstörst",
   "modules.fluid_marker.settings.mode.highlight": "§aHerovrheben",
   "modules.fluid_marker.settings.mode.prevent": "§cVerhindern",
-
   "modules.tnt_timer.name": "TNT Timer",
   "modules.tnt_timer.description": "Zeigt die verbleibende Zeit bis zur Explosion von TNT an",
   "modules.tnt_timer.settings.color.name": "Farbe",
   "modules.tnt_timer.settings.color.description": "Die Farbe des Timers",
-
-  "modules.capes.name": "Capes",
-  "modules.capes.description": "Zeigt Capes von Spielern an",
-
   "modules.fullbright.name": "Fullbright",
   "modules.fullbright.description": "Erhöht die Helligkeit in deiner Welt",
-
   "modules.hud.name": "HUD",
   "modules.hud.description": "Zeigt Informationen über dein Spiel an",
   "modules.hud.settings.mode.name": "Typ",
@@ -146,25 +145,21 @@
   "modules.hud.settings.hideSidebarF3.name": "Sidebar im F3-Menü verstecken",
   "modules.hud.groups.render": "Render",
   "modules.hud.groups.view": "Anzeigen",
-
   "modules.name_tags.name": "Name Tags",
-  "modules.name_tags.description": "Erlaubt dir, deinen Namen & Skin zu ändern",
+  "modules.name_tags.description": "Erlaubt dir, deinen Namen \u0026 Skin zu ändern",
   "modules.name_tags.settings.nick.name": "Nickname",
   "modules.name_tags.settings.ownName.name": "Eigenen Namen anzeigen",
   "modules.name_tags.settings.skin.name": "Skin URL",
-
   "modules.waypoints.name": "Waypoints",
   "modules.waypoints.description": "Setze Wegpunkte in deiner Welt",
   "modules.waypoints.settings.scale.name": "Textgröße",
   "modules.waypoints.settings.rgb.name": "RGB syncronisieren",
   "modules.waypoints.settings.maxDistance.name": "Maximale Entfernung",
-
   "modules.auto_craft.name": "Auto Craft",
   "modules.auto_craft.description": "Automatisches Craften von Rezepten",
-
   "modules.camera_mode.name": "Camera Mode",
   "modules.camera_mode.description": "Erlaubt dir, dich frei in deiner Welt zu bewegen",
-
+  "modules.camera_mode.notInGame": "Du musst im Spiel sein, um den Kameramodus zu verwenden",
   "modules.discord_rpc.name": "Discord RPC",
   "modules.discord_rpc.description": "Zeigt deinen Spielstatus in Discord an",
   "modules.discord_rpc.settings.mode.name": "Anzeigemodus",
@@ -178,7 +173,6 @@
   "modules.discord_rpc.groups.custom": "Custom Configuration",
   "modules.discord_rpc.settings.details.name": "Details",
   "modules.discord_rpc.settings.state.name": "State",
-
   "modules.fly_speed.name": "Fly speed",
   "modules.fly_speed.description": "Ändert deine Fluggeschwindigkeit",
   "modules.fly_speed.settings.speed.name": "Geschwindigkeit",
@@ -186,10 +180,8 @@
   "modules.fly_speed.settings.scroll.name": "Scrollen, um die Geschwindigkeit zu ändern",
   "modules.fly_speed.settings.scroll.description": "Erlaubt dir, die Fluggeschwindigkeit durch STRG + Scrollen zu ändern",
   "modules.fly_speed.text.scrollChanged": "Geschwindigkeit ist nun auf §a%s",
-
   "modules.inventory_tabs.name": "Inventory Tabs",
   "modules.inventory_tabs.description": "Fügt Tabs zu deinem Inventar für Kisten, Öfen, etc. hinzu",
-
   "modules.state_display.name": "State Display",
   "modules.state_display.description": "Zeigt den Status von Blöcken an",
   "modules.state_display.settings.position.name": "Position",
@@ -203,16 +195,13 @@
   "modules.state_display.settings.showPos.name": "Position anzeigen",
   "modules.state_display.settings.colors.name": "Farben",
   "modules.state_display.settings.scale.name": "Textgröße",
-
   "modules.tick_tool.name": "Tick Tool",
   "modules.tick_tool.description": "Mein Chat wird zugespammt...",
-
   "modules.item_hud.name": "Item Hud",
   "modules.item_hud.description": "Zeigt Informationen über dein Inventar und deine Items an",
   "modules.item_hud.settings.armor.name": "Rüstung anzeigen",
   "modules.item_hud.settings.durability.name": "Haltbarkeit anzeigen",
   "modules.item_hud.settings.overChat.name": "Über dem Chat anzeigen",
-
   "modules.better_tooltips.name": "Better Tooltips",
   "modules.better_tooltips.description": "Verbessert die Tooltips von Items",
   "modules.better_tooltips.settings.shulkerTooltip.name": "Shulkerbox Tooltips",
@@ -227,24 +216,26 @@
   "modules.better_tooltips.settings.fixRomanNumerals.descriptions": "Erlaubt römische Zahlen ab einen Verzauberungslevel von 10",
   "modules.better_tooltips.settings.levelAsNumber.name": "Level als Zahl anzeigen",
   "modules.better_tooltips.settings.showMaxOnKey.name": "Halte §eAlt §rfür das maximale Level",
-
+  "modules.better_tooltips.groups.armorTrims": "Rüstungs-Schmiedevorlagen",
+  "modules.better_tooltips.settings.showTrims.name": "Schmiedevorlagen anzeigen",
+  "modules.better_tooltips.settings.rotateTrimPreview.name": "Vorschau rotieren",
   "modules.anti_force_pack.name": "Anti Force-Pack",
   "modules.anti_force_pack.description": "Umgeht erzwungene Ressourcenpakete und gibt dir die Möglichkeit, diese separat herunterzuladen",
   "modules.anti_force_pack.message.required": "Dieser Server hat ein §7erzwungenes §rResourcen-Paket.",
   "modules.anti_force_pack.message.optional": "Dieser Server hat ein §eoptionales §rResourcen-Paket.",
   "modules.anti_force_pack.message.download": "Herunterladen",
   "modules.anti_force_pack.message.download.tooltip": "Klike hier, um das Ressourcen-Paket herunterzuladen",
-
   "modules.no_container_drop.name": "No Container-Drop",
   "modules.no_container_drop.description": "Löscht Container mit /filll und es droppen keine Items",
-
   "modules.auto_top.name": "Auto Top",
   "modules.auto_top.description": "Platziert automatisch den Block aus deiner Offhand auf den platzierten Block aus deiner Haupthand",
-
   "modules.block_outlines.name": "Block Outlines",
   "modules.block_outlines.settings.color.name": "Outline-Farbe",
-  "modules.block_outlines.settings.rgb.name": "RGB syncronisieren",
-
+  "modules.block_outlines.settings.lineWidth.name": "Linienbreite",
+  "modules.block_outlines.settings.renderMode.name": "Anzeige-Modus",
+  "modules.block_outlines.settings.renderMode.default": "Standard",
+  "modules.block_outlines.settings.renderMode.solid": "Voll",
+  "modules.block_outlines.settings.renderMode.glint": "Glanz",
   "modules.antiAds.name": "Ad Blocker",
   "modules.antiAds.description": "Blockiert Werbung von z. B. Server-Shops",
   "modules.antiAds.settings.bossbar.name": "In Bossbars blockieren",
@@ -252,7 +243,6 @@
   "modules.antiAds.settings.chat.name": "Im Chat blockieren",
   "modules.antiAds.settings.keywords.name": "Schlüsselwörter",
   "modules.antiAds.settings.keywords.description": "Schlüsselwörter, die blockiert werden sollen",
-
   "modules.quitConfirm.name": "Quit Confirm",
   "modules.quitConfirm.description": "Fragt dich, ob du wirklich den Server verlassen möchtest",
   "modules.quitConfirm.settings.mode.name": "Modus",
@@ -262,20 +252,34 @@
   "modules.quitConfirm.cooldownText": "Verlassen: %ss",
   "modules.quitConfirm.promptClickAgain": "Möchtest du wirklich den Server verlassen?",
   "modules.quitConfirm.promptConfirm": "Du bist dabei, den Server zu verlassen. Möchtest du das wirklich?",
-
   "modules.crashPreventor.name": "Crash Preventor",
   "modules.crashPreventor.description": "Verhindert Crashes, während du Ingame bist",
-
+  "modules.playerHider.name": "Player Hider",
+  "modules.playerHider.description": "Versteckt Spieler in deiner Nähe",
+  "modules.playerHider.settings.distance.name": "Distanz",
+  "modules.freeLook.name": "Free Look",
+  "modules.crosshair.name": "Crosshair",
+  "modules.crosshair.description": "Passe dein Fadenkreuz an",
+  "modules.crosshair.settings.graphic.name": "Grafik",
+  "modules.crosshair.settings.useLiteralColors.name": "Originale Farben benutzen",
+  "modules.crosshair.settings.useLiteralColors.description": "Das Fadenkreuz passt die Farbe automatisch an, damit es besser sichtbar ist. Wenn du Farben für dein Fadenkreuz nutzt, solltest du das einschalten.",
+  "modules.chatTweaks.name": "Chat Tweaks",
+  "modules.chatTweaks.description": "Verbessert den Chat",
+  "modules.chatTweaks.settings.chatEmojis.name": "Emojis",
+  "modules.chatTweaks.settings.chatEmojis.description": "Du kannst einen Doppelpunkt(:) in den Chat schreiben, um eine Liste von Emojis zu sehen",
+  "modules.chatTweaks.settings.chatTagging.name": "@-Erwähnungen",
+  "modules.chatTweaks.settings.chatTagging.description": "Du kannst Spieler mit @ erwähnen",
+  "modules.chatTweaks.settings.antiSpam.name": "Anti-Spam",
+  "modules.chatTweaks.settings.antiSpam.description": "Fasst Nachrichten zusammen, die den gleichen Inhalt haben",
+  "modules.chatTweaks.settings.saveChat.name": "Chat speichern",
   "module_categories.all": "Alle",
   "module_categories.utility": "Werkzeuge",
   "module_categories.redstone": "Redstone",
   "module_categories.rendering": "Anzeigen",
-
   "keybind.category": "Cactus Mod",
   "keybind.zoom": "Zoom",
   "keybind.menu": "Menü anzeigen",
   "keybind.togglehud": "HUD umschalten",
-
   "content_packs.cactus.name": "Cactus",
   "content_packs.cactus.description": "Die Hauptfunctionen von Cactus (built-in)",
   "content_packs.redstone.name": "Redstone",
@@ -297,8 +301,7 @@
   "content_packs.head_database.name": "Head Database",
   "content_packs.head_database.description": "Fügt benutzerdefinierte Köpfe in dein Kreativinventar hinzu",
   "content_packs.customize.name": "Customize",
-  "content_packs.customize.description": "Erlaubt dir, Die Elemente & UI von Cactus zu ändern",
-
+  "content_packs.customize.description": "Erlaubt dir, Die Elemente \u0026 UI von Cactus zu ändern",
   "gui.screen.cactus.title": "Cactus",
   "gui.screen.cactus.button.options": "Einstellungen",
   "gui.screen.cactus.button.modules": "Module",
@@ -313,7 +316,6 @@
   "gui.screen.cactus.button.screenshots": "Screenshots",
   "gui.screen.cactus.button.content": "Content Packs",
   "gui.screen.cactus.button.hud": "HUD-Editor",
-
   "gui.screen.about.title": "Über Cactus",
   "gui.screen.about.button.patchNotes": "Patch Notes",
   "gui.screen.about.button.website": "Cactus Website",
@@ -321,40 +323,33 @@
   "gui.screen.about.header.developers": "Entwickler",
   "gui.screen.about.header.contributors": "Mitwirkende",
   "gui.screen.about.header.translators": "Übersetzer",
-
   "gui.screen.patches.title": "Patch Notes",
-
   "gui.screen.account_switcher.title": "Account Switcher",
   "gui.screen.account_switcher.reloadSkins": "Skins neu laden",
   "gui.screen.account_switcher.tokenLogin": "Token benutzen",
   "gui.screen.account_switcher.tokenLogin.title": "Mit Token einloggen",
   "gui.screen.account_switcher.tokenLogin.text": "Access-Token",
+  "gui.screen.account_switcher.changeSkin": "Skin ändern",
   "gui.screen.account_switcher.offlineSession": "Offline-Login",
   "gui.screen.account_switcher.offlineSession.text": "Benutzername",
   "gui.screen.account_switcher.login": "Login",
   "gui.screen.account_switcher.addAccount": "Account hinzufügen",
   "gui.screen.account_switcher.removeAccount": "Entfernen",
   "gui.screen.account_switcher.remove.header": "Bist du sicher, dass du diesen Account entfernen möchtest?",
-  "gui.screen.account_switcher.remove.warning": "'%s' wird entfernt. Du kannst diesen Account später wieder hinzufügen.",
+  "gui.screen.account_switcher.remove.warning": "\u0027%s\u0027 wird entfernt. Du kannst diesen Account später wieder hinzufügen.",
   "gui.screen.add_account.checkBrowser": "Überprüfe deinen Browser",
   "gui.screen.add_account.error": "§cEin Fehler ist aufgetreten.",
   "gui.screen.add_account.complete": "Du kannst dieses Fenster jetzt schließen.",
-
   "gui.screen.addons.title": "Cactus Addons",
   "gui.screen.addons.text.noAddons": "Keine Addons geladen.",
-
   "gui.screen.cactus_settings.title": "Cactus-Einstellungen",
-
   "gui.screen.button_options.title": "Widget-Optionen",
-
   "gui.screen.unsafeWarning.title": "Warte!",
   "gui.screen.unsafeWarning.dismiss": "Ich verstehe das Risiko",
   "gui.screen.unsafeWarning.back": "Zurück zum sicheren Bereich",
   "gui.screen.unsafeWarning.unsafeModule": "Einige Server könnten dieses Modul als Cheat definieren. Wenn du es auf öffentlichen Servern verwendest, könntest du von einigen überreaktiven AntiCheats markiert werden.\nDie Verwendung erfolgt auf eigene Gefahr!",
-
   "gui.screen.local_servers.title": "Lokale Server",
   "gui.screen.local_servers.createServer": "Server erstellen",
-
   "gui.screen.create_local_server.title": "Lokalen Server erstellen",
   "gui.screen.create_local_server.back": "Zurück",
   "gui.screen.create_local_server.button.create": "Erstellen",
@@ -365,7 +360,7 @@
   "gui.screen.create_local_server.error.portUsed": "§e⚠ Dieser Port wird bereits verwendet. Du kannst ihm weiterhin verwenden, aber es könnte zu Konflikten führen.",
   "gui.screen.create_local_server.error.noDownload": "§cKein Server-Download gefunden.",
   "gui.screen.create_local_server.error.nameUnavailable": "§cEin Server mit diesem Namen existiert bereits.",
-  "gui.screen.create_local_server.error.platform": "§cWähle eine Plattform & eine Version aus",
+  "gui.screen.create_local_server.error.platform": "§cWähle eine Plattform \u0026 eine Version aus",
   "gui.screen.create_local_server.header.serverName": "Servername",
   "gui.screen.create_local_server.header.serverPort": "Serverport",
   "gui.screen.create_local_server.header.platform": "Server-Software",
@@ -377,34 +372,28 @@
   "gui.screen.create_local_server.platform.forge": "Forge (Mods)",
   "gui.screen.create_local_server.platform.legacy": "Legacy",
   "gui.screen.create_local_server.platform.custom": "Custom ..",
-
   "gui.screen.feedback.title": "Feedback geben",
   "gui.screen.feedback.widget.feedback": "Feedback ..",
   "gui.screen.feedback.button.submit": "Feedback senden",
   "gui.screen.feedback.state.empty": "§cDas Feedback-Feld darf nicht leer sein!",
   "gui.screen.feedback.state.processing": "§7Verarbeite Feedback ...",
   "gui.screen.feedback.state.thankYou": "§aDanke für dein Feedback!",
-
   "gui.screen.module_options.text.no_settings": "Dieses Modul hat keine Einstellungen",
-
   "gui.screen.module_list.title": "Module",
   "gui.screen.module_list.text.buttonToggle": "Linksklick - Umschalten",
   "gui.screen.module_list.text.buttonSettings": "Rechtsklick - Einstellungen",
   "gui.screen.module_list.text.search": "Suche..",
-
   "gui.screen.screenshot_view.title": "Screenshot anzeigen: %s",
   "gui.screen.screenshot_view.button.openScreenshot": "Bild öffnen",
   "gui.screen.screenshot_view.button.openFolder": "Ordner öffnen",
   "gui.screen.screenshot_view.button.copyImage": "Bild kopieren",
   "gui.screen.screenshot_view.button.delete": "Löschen",
   "gui.screen.screenshot_view.delete.header": "Screenshot löschen",
-  "gui.screen.screenshot_view.delete.warning": "Biust du sicher, dass du '%s' löschen möchtest?",
-
+  "gui.screen.screenshot_view.delete.warning": "Biust du sicher, dass du \u0027%s\u0027 löschen möchtest?",
   "gui.screen.nbt_editor.title": "NBT Editor",
   "gui.screen.nbt_editor.widget.count": "Item-Anzahl",
   "gui.screen.nbt_editor.button.save": "Speichern",
   "gui.screen.nbt_editor.invalidJson": "Ungültiges JSON!",
-
   "gui.screen.vs_nbt_editor.title": "Visual NBT Editor",
   "gui.screen.vs_nbt_editor.key": "Key",
   "gui.screen.vs_nbt_editor.text": "Text",
@@ -413,28 +402,21 @@
   "gui.screen.vs_nbt_editor.list.c": "%s (%s Items)",
   "gui.screen.vs_nbt_editor.list.1": "%s (%s Item)",
   "gui.screen.vs_nbt_editor.type.compound": "NBT Compound",
-
   "gui.screen.settings_screen.no_settings": "Keine Einstellungen verfügbar",
-
   "gui.screen.creative.tools": "Tools",
   "gui.screen.creative.ast": "Rüstungsständer erstellen",
   "gui.screen.creative.maps": "Map-Item-Tool",
   "gui.screen.creative.head": "Spielerkopf bekommen",
   "gui.screen.creative.hdb": "Köpfe laden",
   "gui.screen.creative.editNbt": "Alt + Rechtsklicke ein Item, um die NBT zu bearbeiten",
-
   "gui.screen.gameMenu.button.shareWorld": "Welt teilen",
-
   "gui.screen.content_packs.title": "Content Packs",
-  "gui.screen.content_packs.addedBy": "Hinzugefügt von '%s'",
+  "gui.screen.content_packs.addedBy": "Hinzugefügt von \u0027%s\u0027",
   "gui.screen.content_packs.alwaysEnabled": "Diese Pack kann nicht deaktiviert werden",
-
   "gui.screen.report_server.title": "Server melden",
-
   "gui.screen.addAccount.checkBrowser": "Überprüfe deinen Browser",
   "gui.screen.addAccount.complete": "Du kannst dieses Fenster jetzt schließen.",
   "gui.screen.addAccount.error": "Ein Fehler ist aufgetreten.",
-
   "gui.screen.ast_editor.title": "ArmorStand Editor",
   "gui.screen.ast_editor.option.rotationView": "Rotation",
   "gui.screen.ast_editor.option.nameVisible": "Name sichtbar",
@@ -462,12 +444,10 @@
   "gui.screen.ast_editor.text.arm": "Arm",
   "gui.screen.ast_editor.text.leg": "Bein",
   "gui.screen.ast_editor.text.itemName": "Benutzerdefinierter Rüstungsständer",
-
   "gui.screen.update.title": "Ein neues Update ist verfügbar!",
   "gui.screen.update.download": "Herunterladen",
   "gui.screen.update.openUrl": "URL öffnen",
   "gui.screen.update.skip": "Später",
-
   "gui.screen.host_world.start": "Welt veröffentlichen",
   "gui.screen.host_world.tab.general": "Allgemein",
   "gui.screen.host_world.tab.host": "Host",
@@ -476,12 +456,10 @@
   "gui.screen.host_world.maxPlayers": "Maximale Spieler",
   "gui.screen.host_world.slots": "Slots",
   "gui.screen.host_world.customDomain": "Benutzerdefinierte Domain",
-
   "gui.screen.lan_whitelist.title": "Whitelist",
   "gui.screen.lan_whitelist.whitelist": "Mithilfe einer Whitelist kannst du nur bestimmten Spielern den Beitritt zu deiner Welt erlauben. Wenn die Whitelist deaktiviert ist, kann jeder mit der IP-Adresse beitreten.",
   "gui.screen.lan_whitelist.addPlayer": "Spieler hinzufügen",
   "gui.screen.lan_whitelist.removePlayer": "Spieler entfernen",
-
   "gui.screen.hudAdd.title": "HUD-Element hinzufügen",
   "gui.screen.hudAdd.add": "Element hinzufügen",
   "gui.screen.hudAdd.categories": "Kategorien",
@@ -504,42 +482,46 @@
   "gui.screen.hudAdd.category.keystrokes.wasd": "WASD",
   "gui.screen.hudAdd.category.keystrokes.wasdqe": "WASD QE",
   "gui.screen.hudAdd.category.keystrokes.wasdrl": "WASD RL",
-
   "gui.screen.editWorld.copy": "Kopie erstellen",
   "gui.screen.editWorld.copy.success": "Kopie erstellt!",
   "gui.screen.editWorld.icon": "Icon ändern",
   "gui.screen.editWorld.icon.types": "Icon ändern",
-
   "gui.screen.selectWorld.changeDir": "Weltenordner ändern",
-
   "gui.screen.notifications.title": "Benachrichtigungen",
   "gui.screen.notifications.unread": "%s ungelesen",
   "gui.screen.notifications.toastTitle": "Neue Nachricht",
   "gui.screen.notifications.noMessages": "Keine Benachrichtigungen",
   "gui.screen.notifications.byAuthor": "von %s",
-
   "gui.screen.macros.title": "Makros",
   "gui.screen.macros.create": "Makro erstellen",
   "gui.screen.createMacro.title": "Makro erstellen",
   "gui.screen.editMacro.title": "Makro bearbeiten",
   "gui.screen.editMacro.addCommand": "Befehl hinzufügen",
-
   "gui.screen.colorPicker.useRgb.name": "RGB verwenden",
-
   "gui.screen.screenshots.title": "Screenshots",
-
   "gui.screen.backgroundSelector.title": "Hintergrund auswählen",
   "gui.screen.backgroundSelector.reload": "Hintergrund neu laden",
-
+  "gui.screen.backgroundSelector.loading": "%s Hintergründe werden geladen...",
+  "gui.screen.skinChanger.title": "Skin-Changer",
+  "gui.screen.skinChanger.changeSuccess.title": "Skin geändert",
+  "gui.screen.skinChanger.changeSuccess.message": "Dein Skin wurde erfolgreich geändert",
+  "gui.screen.skinChanger.changeFailed": "Skin konnte nicht geändert werden. Überprüfe deine Logs.",
+  "gui.screen.skinChanger.deleteSkin.title": "Skin löschen",
+  "gui.screen.skinChanger.deleteSkin.message": "Bist du sicher, dass du '%s' löschen möchtest?",
+  "gui.screen.skinChanger.renameTitle": "Skin umbenennen",
+  "gui.screen.skinChanger.renamePlaceholder": "skin.png",
+  "gui.screen.skinChanger.download": "Skin herunterladen",
+  "gui.screen.skinChanger.switchAccount": "Account wechseln",
+  "gui.screen.snippets.title": "Snippets",
   "settingGroups.main": "Allgemein",
   "settingGroups.irc": "IRC",
   "settingGroups.widgets": "Widgets",
   "settingGroups.hud": "HUD",
   "settingGroups.experiments": "Experimente",
-
   "settings.prefix.name": "Präfix",
   "settings.commandPrefix.name": "Befehls-Präfix",
   "settings.accentColor.name": "Akzentfarbe",
+  "settings.rgbFadingSpeed.name": "RGB-Geschwindigkeit",
   "settings.updateNotify.name": "Update-Benachrichtigungen",
   "settings.experiments.name": "Experimente aktivieren",
   "settings.experiments.description": "§cExperimente sind neue Ideen oder Features, die noch nicht fertig sind.\n\nEinschalten kann zu Bugs und/oder Crashes führen.\n§4§lBenutzung auf eigene Gefahr!",
@@ -548,6 +530,8 @@
   "settings.enableIrcChat.name": "Globalen Chat aktivieren",
   "settings.enableIrcChat.description": "Erlaubt dir, mit anderen Spielern zu chatten, die auch Cactus verwenden",
   "settings.ircShortPrefix.name": "IRC-Kurzpräfix",
+  "settings.showCactusCapes.name": "Cactus-Capes anzeigen",
+  "settings.showCactusCapes.description": "Zeigt spezielle Capes von Cactus am, die Spieler tragen",
   "settings.compactUi.name": "Kompakte UI",
   "settings.moduleStyle.name": "Modul-Widget-Stil",
   "settings.moduleStyle.fill": "Füllen",
@@ -561,6 +545,7 @@
   "settings.toggleFeedback.toast": "Toast-Benachrichtigung",
   "settings.toggleFeedback.off": "§cAus",
   "settings.noChatWarning.name": "Keine Chat-Warnung",
+  "settings.disableTelemetry.name": "Telemetrie deaktivieren",
   "settings.levelDirectory.name": "Weltenordner",
   "settings.chatEmotes.name": "Chat-Emotes",
   "settings.customBackground.name": "Benutzerdefinierter Hintergrund",
@@ -572,7 +557,7 @@
   "settings.scriptModifyWidgets.name": "Benutzerskript-Modifikation von Widgets",
   "settings.describeModulesWhenHovered.name": "Modul-Tooltip anzeigen",
   "settings.removeRealms.name": "Realms entfernen",
-  "settings.removeLangAndAccessibility.name": "Sprache & Barrierefreiheitbuttons ausbl.",
+  "settings.removeLangAndAccessibility.name": "Sprache \u0026 Barrierefreiheitbuttons ausbl.",
   "settings.removeLangAndAccessibility.description": "Entfernt die Buttons für Sprache und Barrierefreiheit vom Titelbildschirm",
   "settings.feedbackToCactus.name": "Feedback-Button ersetzen",
   "settings.expandTitleScreenWidget.name": "Titelbildschirm-Widget erweitern",
@@ -581,10 +566,7 @@
   "settings.replaceMouseOptions.description": "Ersetzt die Mausoptionen durch einen Schieberegler für die Sensitivität",
   "settings.cactusByOptions.name": "Cactus-Button neben Optionen",
   "settings.cactusByOptions.description": "Fügt einen Cactus-Button neben den Optionen hinzu im Titelbildschirm hinzu.",
-
   "worldHosting.notWhitelisted": "Diese Welt ist privat.\nFrage den Besitzer, ob er dich auf die Whitelist hinzufügt.",
-
   "exception.addon_init": "Fehler, während das Addon geladen wurde: \"%s\".",
   "exception.addon_author": "Das Addon \"%s\" benötigt mindestens einen Autor, um es in fabric.mod.json zu definieren. Siehe https://fabricmc.net/wiki/documentation:fabric_mod_json_spec für weitere Informationen."
-
 }
